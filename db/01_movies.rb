@@ -1,1 +1,1 @@
-class CreateMovies < Active Record
+class CreateMovies < ActiveRecord:Migration
