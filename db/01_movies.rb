@@ -1,0 +1,1 @@
+class CreateMovies < Active Record
