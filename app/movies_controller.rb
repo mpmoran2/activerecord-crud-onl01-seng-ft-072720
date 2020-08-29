@@ -6,7 +6,7 @@
 # end                              # end
 
 def can_be_instantiated_and_then_saved
-  movie = Movie.new 
+  movie = Movie.new
   movie.title = "This is a title."
   movie.save
 end
@@ -20,12 +20,13 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.create(attributes)
-  movie.save
-  movie
+    movie = Movie.create(attributes)
+    movie.save
+    movie
 end
 
-def can_be_created_in_a_block(args = {:title => "Home Alone", :release_date => 1990})
+
+def can_be_created_in_a_block(args = {:title =>  "Home Alone", :release_date => 1990 })
   (title = "Home Alone", release_date = 1990)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
@@ -46,7 +47,7 @@ def can_get_the_last_item_in_the_database
 end
 
 def can_get_size_of_the_database
-  Movie.all.size
+  Movie.all.size 
 end
 
 def can_find_the_first_item_from_the_database_using_id
@@ -81,7 +82,7 @@ def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
   movie = Movie.find_by(title: "Wat?")
-  movie.Update(title: "Wat, huh?")
+  movie.update(title: "Wat, huh?")
 end
 
 def can_update_multiple_items_at_once
